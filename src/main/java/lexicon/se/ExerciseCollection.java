@@ -1,7 +1,7 @@
 package lexicon.se;
 
 import java.util.*;
-
+import java.util.HashMap;
 public class ExerciseCollection {
 
     public static void ex1() {
@@ -176,9 +176,29 @@ public class ExerciseCollection {
     public static void ex9() {
         //9. Create a new hashMap of type <Integer,String> and populate it with elements containing an
         //id(Integer) and a car brand(String). Lastly, print out the entire hashMap.
+        HashMap<Integer, String> carMap = new HashMap<Integer, String>();
+        carMap.put(1, "Benz");
+        carMap.put(2, "Maserati");
+        carMap.put(3, "BMW");
+        carMap.put(4, "Audi");
+        //Display content
+        Set set = carMap.entrySet();
+        Iterator iterator = set.iterator();
+        while (iterator.hasNext()) {
+            Map.Entry waterMelon = (Map.Entry) iterator.next();
+            System.out.println(" Car Id is" + waterMelon.getKey());
+            System.out.println("and the brand is" + waterMelon.getValue());
+            System.out.println(waterMelon.getKey());
 
+        }
+    }
+    public static void ex10(){
+        //10. Create a new hashMap of type <Integer,String> and populate it with elements containing an
+        //id(Integer) and a car brand(String). Lastly, print out only the keys.
+     ExerciseCollection.ex9();
 
     }
+
 
 }
 
