@@ -1,7 +1,9 @@
 package lexicon.se;
 
-
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.ListIterator;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,9 +19,9 @@ public class Main {
         //ExerciseCollection.ex10();
         ///////////////////////////////////////////////////////////////////////Exercise 12;
 
-        Car car = new Car(001,"Audi","Q5");
-        Car car1 = new Car(002,"Toyota","Prado");
-        Car car2 = new Car(003,"Citroen","C3");
+        Car car = new Car(1,"Audi","Q5");
+        Car car1 = new Car(2,"Toyota","Prado");
+        Car car2 = new Car(3,"Citroen","C3");
         HashMap<String , Car> CarMap = new HashMap<>();
         CarMap.put(car.getBrand(),car);// dedicating the key and value based on object info to map
         CarMap.put(car1.getBrand(),car1);
@@ -33,12 +35,19 @@ public class Main {
         for (String key : CarMap.keySet()){
             System.out.println("brand is " + key );
         }
+        ArrayList<String> names = new ArrayList<>();
+        names.add("dsads");
+        names.add("lgkfd");
+        names.add("fghh");
 
-
-
-
+        ListIterator<String> itr=names.listIterator();
+        while (itr.hasNext()){
+            System.out.println(itr.next());
+        }
+        HashSet<String> name= new HashSet<String>();
 
     }
+
 
 }
 
