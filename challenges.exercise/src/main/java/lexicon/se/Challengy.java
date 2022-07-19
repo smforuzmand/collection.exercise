@@ -38,22 +38,41 @@ the two sets and retain in the first set only those days that are the same in bo
 email (String) and a name (String). Next, create a new Set and populate it with the keys from
 the hashMap you created.*/
 
-        HashMap<String,String> hm=new HashMap<String,String>();
-        hm.put("email1","Affaren");
-        hm.put("email2","Mappat");
-        hm.put("email3","fff");
-        HashSet<String>newSet=new HashSet<>(hm.values());
-        HashSet<String>newSet1=new HashSet<>(hm.keySet());
-        for (String names:newSet1) {
+        HashMap<String, String> hm = new HashMap<String, String>();
+        hm.put("email1", "Affaren");
+        hm.put("email2", "Mappat");
+        hm.put("email3", "fff");
+        HashSet<String> newSet = new HashSet<>(hm.values());
+        HashSet<String> newSet1 = new HashSet<>(hm.keySet());
+        for (String names : newSet1) {
             System.out.println("newSet = " + names);
             //System.out.println(newSet1);
 
         }
 
 
+    }
+
+    public static <T> Set<T> arrayToSet(T array[]) {
+        Set<T> set = new HashSet<>();
+        for (T t : array) {
+
+            set.add(t);
+        }
+
+        return set;
+    }
+
+    public static void ex4() {
+        Integer[] array= {1, 4, 4, 2, 6, 7};
+
+        System.out.println("Array with numbers: " + Arrays.toString(array));
+        Set<Integer> set = arrayToSet(array);
 
 
-
-
+        System.out.println("Set without duplicate: " + set);
     }
 }
+
+
+
